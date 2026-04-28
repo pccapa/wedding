@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pablo & Jannet</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Georgia, serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffe4e6, #fff1f2, #ffffff);
+        overflow-x: hidden;
+      }
+
+      /* BACKGROUND GLOW */
+      .bg-glow {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background: #fda4af;
+        filter: blur(120px);
+        top: 10%;
+        left: 20%;
+        opacity: 0.4;
+      }
+
+      .bg-glow2 {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background: #fb7185;
+        filter: blur(120px);
+        bottom: 10%;
+        right: 20%;
+        opacity: 0.3;
+      }
+
+      /* CARD */
+      .card {
+        width: 92%;
+        max-width: 420px;
+        backdrop-filter: blur(14px);
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        animation: fadeUp 1.2s ease;
+      }
+
+      /* NAMES */
+      .names {
+        font-size: 28px;
+        color: #9f1239;
+        margin: 10px 0;
+      }
+
+      /* TEXT */
+      .text {
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      /* VIDEO */
+      .video {
+        margin: 20px 0;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .video video {
+        width: 100%;
+        display: block;
+      }
+
+      /* DETAILS */
+      .details {
+        font-size: 14px;
+        color: #374151;
+      }
+
+      .details p {
+        margin: 6px 0;
+      }
+
+      /* FOOTER */
+      .footer {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #9f1239;
+      }
+
+      /* ANIMATION */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* MOBILE */
+      @media (max-width: 600px) {
+        .card {
+          padding: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow2"></div>
+
+    <div class="card">
+
+      <h1 class="names">Pablo y Jannet</h1>
+
+      <p class="text">Los invitamos a celebrar nuestro matrimonio civil 💍</p>
+
+      <div class="video">
+        <video autoplay muted controls playsinline>
+          <source src="wedding.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="details">
+        <p><strong>June 15, 2026</strong></p>
+        <p>9:00 PM</p>
+        <p>Sector 1 Grupo 5 Mz H Lote 5 - Villa el Salvador</p>
+      </div>
+
+      <div class="footer">Con amor ❤️</div>
+    </div>
+  </body>
+</html>
