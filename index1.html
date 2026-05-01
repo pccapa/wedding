@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floral Frame</title>
+
+    <style>
+      body {
+        margin: 0;
+        background: radial-gradient(circle at top, #f7f3ee, #e9e1d7);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100vh;
+      }
+
+      /* 📱 responsive container */
+      .container {
+        width: min(100%, 420px);
+        height: min(100dvh, 900px);
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+
+        background: #fefcf9;
+        overflow: hidden;
+      }
+
+      /* 🌸 top & bottom bars */
+      .topbar,
+      .bottombar {
+        height: clamp(70px, 20vh, 140px);
+        overflow: hidden;
+      }
+
+      .topbar img,
+      .bottombar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .topbar img {
+        object-position: 50% 90%;
+      }
+
+      .bottombar img {
+        object-position: 50% 90%;
+        transform: scaleY(-1);
+        transform-origin: center;
+      }
+
+      /* 📄 CONTENT FIXED (THIS IS THE KEY CHANGE) */
+      .content {
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #fefcf9;
+
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center; /* vertical center */
+      }
+
+      /* 🎬 VIDEO */
+      .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .video video {
+        width: min(100%, 400px);
+        max-height: 50vh;
+        border-radius: 16px;
+        object-fit: contain;
+      }
+
+      /* 🖥 desktop enhancement */
+      @media (min-width: 768px) {
+        .container {
+          border-radius: 20px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- TOP BAR -->
+      <div class="topbar">
+        <img src="toolbar.png" />
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+        <div class="video">
+          <video autoplay muted controls playsinline>
+            <source src="wedding.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="bottombar">
+        <img src="toolbar.png" />
+      </div>
+    </div>
+  </body>
+</html>
